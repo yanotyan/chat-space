@@ -13,8 +13,19 @@
  }
 
  .chat-main{
-   width: 100vw;
+   width: calc(100% - 300px);
    height: 100vh;
    background-color:white
-
  }
+.chat-main__group-info{
+  height: 100px;
+  background-color: #eeeeee;
+}
+.chat-main__message-list{
+  height: calc(100% - 100px - 90px);
+  background-color: #fafafa;
+}
+.chat-main__message-form{
+  height: 90px;
+  background-color: #d2d2d2;
+}
