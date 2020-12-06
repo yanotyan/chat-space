@@ -35,7 +35,6 @@
 }
  
 .iconlist{
-  
   width: 60px;
   display:flex;
   justify-content: flex-end;
@@ -47,11 +46,32 @@
   }
 
 
- .side-ber__group-list{
-   height: calc(100% - 100px);
-   background-color: #2f3e51;
+.side-ber__group-list{
+  height: calc(100% - 100px);
+  background-color: #2f3e51;
+  padding: 0px 20px;
  }
 
+.group{
+  color: white;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 20px 0 40px 0;
+  //  background-color: red;
+  
+ }
+.group-name{
+  font-size: 15px;
+  margin-bottom: 5px;
+  //  background-color: rosybrown;
+  //  color:#ffffff;
+ }
+
+.group-message{
+  font-size: 11px;
+  //  background-color: royalblue;
+  // font:#ffffff;
+ }
 
  .chat-main{
    width: calc(100% - 300px);
