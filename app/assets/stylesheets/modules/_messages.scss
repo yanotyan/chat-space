@@ -24,20 +24,27 @@
   
   height: 20px;
   width: 260px;
-  background-color: #d8d8d8;
+  
   justify-content: space-between;
   display: flex;
  }
   
 .name{
   font: 16px;
-  color: red;
+  color: #ffffff;
 }
  
-.icon{
-  background-color: yellow;
+.iconlist{
+  
   width: 60px;
+  display:flex;
+  justify-content: flex-end;
 }
+
+.icon{
+  margin-left: 5px;
+  color:#ffffff;
+  }
 
 
  .side-ber__group-list{

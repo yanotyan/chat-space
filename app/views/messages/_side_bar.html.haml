@@ -3,7 +3,16 @@
     .UserName 
       .name
         hogehoge
-      .icon
+      %ul.iconlist
+        %li.icon
+          = link_to  "#", class:"icon" do
+            = icon('far', 'edit' , )
+        %li.icon
+          = link_to   "#", class:"icon" do
+            = icon('fas', 'cog')
+        
+        
+      
 
   .side-ber__group-list  
     <まだメッセージはありません。>
