@@ -33,4 +33,13 @@
         こんにツア
 
 
-  .chat-main__message-form
+  .Footer
+    .form
+      .form-message
+        %input{type:"text", class:"form-text", placeholder:"type a message"}
+        .form-image
+          %label{class: "input-box__image"}
+            = icon('fas', 'image')
+            %input{type:"file", class:"hidden"}
+      
+      %input{type:"submit", class:"form-send", value:"SEND"}

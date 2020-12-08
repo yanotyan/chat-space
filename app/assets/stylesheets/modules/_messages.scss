@@ -118,7 +118,7 @@
 
 .chat-main__message-list{
   height: calc(100% - 100px - 90px);
-  background-color: #fafafafa;
+  // background-color: #fafafafa;
   box-sizing: border-box;
   margin-left: 40px;
 }
@@ -157,7 +157,52 @@
  
 
 
-.chat-main__message-form{
+.Footer{
   height: 90px;
   background-color: #d2d2d2;
+  padding: 20px 40px;
+}
+
+.form{
+display: flex;
+}
+
+.form-message{
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.form-text{
+  height: 50px;
+  width: 100%;
+  border: none;
+  // background-color: olivedrab;
+  padding: 0 45px 0 15px;
+}
+
+
+.form-image{
+  position: absolute;
+  height: 50px;
+  right: 10px;
+}
+
+.input-box__image{
+  font-size: 25px;
+  line-height: 50px;
+}
+
+.hidden{
+  display: none;
+}
+
+.form-send{
+  font-size: 16px;
+  border: none;
+  height: 50px;
+  background-color: #38aef0;
+  color: white;
+  margin-left: 10px;
+  padding: 0 30px;
 }
