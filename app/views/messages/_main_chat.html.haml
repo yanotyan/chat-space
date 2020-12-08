@@ -7,10 +7,30 @@
         Menber:name
     .chat-member
     .main-right
-      %a{:href => "#"} 
+      = link_to '#' do
         Edit
         
   
 
   .chat-main__message-list
+    .Message
+      .MessageTop
+        .MessageTop__username
+          PON
+        .MessageTop__date
+          2020/12/09(水)18:00
+      .MessageMain
+        おはようさん
+    
+  
+    .Message
+      .MessageTop
+        .MessageTop__username
+          PON
+        .MessageTop__date
+          2020/12/09(水)19:00
+      .MessageMain
+        こんにツア
+
+
   .chat-main__message-form

@@ -101,20 +101,62 @@
 }
 
 .main-right{
-  color: #38aef0;
+  
   border:1px solid #38aef0 ;
   font-size: 16px;
   line-height: 40px;
   height: 40px;
   margin: 28px 40px 0 0;
   padding: 0 20px;
-  text-decoration: n;
+
+  a {
+    text-decoration: none;
+    color: #38aef0;
+  }
+  
 }
 
 .chat-main__message-list{
   height: calc(100% - 100px - 90px);
-  background-color: #fafafa;
+  background-color: #fafafafa;
+  box-sizing: border-box;
+  margin-left: 40px;
 }
+
+.message{
+  background-color: #38aef0;
+  padding: 35px 0 46px;
+}
+
+.MessageTop{
+  font-size: 16px;
+  color: #333333;
+  display: flex;
+  padding-top: 35px;
+  
+}
+
+.MessageTop__username{
+  font-size: 16px;
+  color:#333333;
+  
+  }
+
+.MessageTop__date{
+  font-size: 12px;
+  color:#999999;
+  text-align: right;
+  padding-left: 10px;
+}
+
+.MessageMain{
+  font-size: 14px;
+  color:#434A54;
+  margin-top: 12px;
+}
+ 
+
+
 .chat-main__message-form{
   height: 90px;
   background-color: #d2d2d2;
