@@ -1,0 +1,45 @@
+.chat-main
+  .chat-main__group-info
+    .main-left
+      .left-group
+        test
+      .left-menber
+        Menber : name
+    .chat-member
+    .main-right
+      = link_to '#' do
+        Edit
+        
+  
+
+  .chat-main__message-list
+    .Message
+      .MessageTop
+        .MessageTop__username
+          PON
+        .MessageTop__date
+          2020/12/09(水)18:00
+      .MessageMain
+        おはようさん
+    
+  
+    .Message
+      .MessageTop
+        .MessageTop__username
+          PON
+        .MessageTop__date
+          2020/12/09(水)19:00
+      .MessageMain
+        こんにツア
+
+
+  .Footer
+    .form
+      .form-message
+        %input{type:"text", class:"form-text", placeholder:"type a message"}
+        .form-image
+          %label{class: "input-box__image"}
+            = icon('fas', 'image')
+            %input{type:"file", class:"hidden"}
+      
+      %input{type:"submit", class:"form-send", value:"Send"}
