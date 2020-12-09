@@ -21,10 +21,8 @@
  }
 
  .UserName{
-  
   height: 20px;
   width: 260px;
-  
   justify-content: space-between;
   display: flex;
  }
@@ -45,7 +43,6 @@
   color:#ffffff;
   }
 
-
 .side-ber__group-list{
   height: calc(100% - 100px);
   background-color: #2f3e51;
@@ -57,20 +54,15 @@
   box-sizing: border-box;
   align-items: center;
   padding: 20px 0 40px 0;
-  //  background-color: red;
-  
  }
+
 .group-name{
   font-size: 15px;
   margin-bottom: 5px;
-  //  background-color: rosybrown;
-  //  color:#ffffff;
  }
 
 .group-message{
   font-size: 11px;
-  //  background-color: royalblue;
-  // font:#ffffff;
  }
 
  .chat-main{
@@ -78,11 +70,12 @@
    height: 100vh;
    background-color:white
  }
+
 .chat-main__group-info{
   height: 100px;
-  background-color: #eeeeee;
   display: flex;
   justify-content: space-between;
+  border-bottom: solid 1px #eee;
 }
 
 .main-left{
@@ -93,15 +86,14 @@
   font-size: 20px;
   padding: 35px 0 15px 0;
   color: #333333;
-
 }
-.left-member{
+
+.left-menber{
   font-size: 12px;
-  color:#999999;
+  color: #999999;
 }
 
-.main-right{
-  
+.main-right{ 
   border:1px solid #38aef0 ;
   font-size: 16px;
   line-height: 40px;
@@ -118,9 +110,9 @@
 
 .chat-main__message-list{
   height: calc(100% - 100px - 90px);
-  // background-color: #fafafafa;
+  background-color: #fafafa;
   box-sizing: border-box;
-  margin-left: 40px;
+  padding: 35px 40px 0;
 }
 
 .message{
@@ -155,8 +147,6 @@
   margin-top: 12px;
 }
  
-
-
 .Footer{
   height: 90px;
   background-color: #d2d2d2;
@@ -177,7 +167,6 @@ display: flex;
   height: 50px;
   width: 100%;
   border: none;
-  // background-color: olivedrab;
   padding: 0 45px 0 15px;
 }
 
