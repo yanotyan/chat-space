@@ -5,7 +5,7 @@
         = current_user.name
       %ul.iconlist
         %li.icon
-          = link_to  "#", class:"icon" do
+          = link_to new_group_path, class:"icon" do
             = icon('far', 'edit')
         %li.icon
           = link_to  edit_user_path(current_user), class:"icon" do
