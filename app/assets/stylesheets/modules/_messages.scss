@@ -50,10 +50,13 @@
  }
 
 .group{
-  color: white;
   box-sizing: border-box;
   align-items: center;
   padding: 20px 0 40px 0;
+  
+  a{
+    color:white;
+  }
  }
 
 .group-name{

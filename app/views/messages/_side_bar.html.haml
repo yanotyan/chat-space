@@ -15,14 +15,12 @@
       
 
   .side-ber__group-list  
-    .group
-      .group-name
-        techcamp
-      .group-message
-        <まだメッセージはありません>
-    .group
-      .group-name
-        techcamp
-      .group-message
-        <まだメッセージはありません>
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group-name
+            = group.name
+          .group-message
+            メッセージはまだありません
+
         
