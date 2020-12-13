@@ -34,12 +34,10 @@
 
 
   .Footer
-    .form
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .form-message
-        %input{type:"text", class:"form-text", placeholder:"type a message"}
-        .form-image
-          %label{class: "input-box__image"}
-            = icon('fas', 'image')
-            %input{type:"file", class:"hidden"}
-      
-      %input{type:"submit", class:"form-send", value:"Send"}
+        = f.text_field :content, class: 'form-text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon('far', 'image', class: 'form__icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form-send'
