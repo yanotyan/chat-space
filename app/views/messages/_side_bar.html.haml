@@ -5,7 +5,7 @@
         = current_user.name
       %ul.iconlist
         %li.icon
-          = link_to  "#", class:"icon" do
+          = link_to new_group_path, class:"icon" do
             = icon('far', 'edit')
         %li.icon
           = link_to  edit_user_path(current_user), class:"icon" do
@@ -15,14 +15,12 @@
       
 
   .side-ber__group-list  
-    .group
-      .group-name
-        techcamp
-      .group-message
-        <まだメッセージはありません>
-    .group
-      .group-name
-        techcamp
-      .group-message
-        <まだメッセージはありません>
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group-name
+            = group.name
+          .group-message
+            メッセージはまだありません
+
         
