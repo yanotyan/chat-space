@@ -13,25 +13,8 @@
   
 
   .chat-main__message-list
-    .Message
-      .MessageTop
-        .MessageTop__username
-          PON
-        .MessageTop__date
-          2020/12/09(水)18:00
-      .MessageMain
-        おはようさん
+    = render @messages
     
-  
-    .Message
-      .MessageTop
-        .MessageTop__username
-          PON
-        .MessageTop__date
-          2020/12/09(水)19:00
-      .MessageMain
-        こんにツア
-
 
   .Footer
     = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
