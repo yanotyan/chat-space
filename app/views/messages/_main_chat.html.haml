@@ -2,12 +2,16 @@
   .chat-main__group-info
     .main-left
       .left-group
-        test
+        = @group.name
+
       .left-menber
-        Menber : name
+        - @group.users.each do |user|
+          = user.name
+          
+
     .chat-member
     .main-right
-      = link_to '#' do
+      = link_to edit_group_path, do
         Edit
         
   
@@ -15,6 +19,7 @@
   .chat-main__message-list
     = render @messages
     
+
 
   .Footer
     = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
