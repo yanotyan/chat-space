@@ -119,16 +119,14 @@
 }
 
 .message{
-  background-color: #38aef0;
-  padding: 35px 0 46px;
+  // background-color: #38aef0;
+ margin-bottom: 46px;
 }
 
 .MessageTop{
   font-size: 16px;
   color: #333333;
   display: flex;
-  padding-top: 35px;
-  
 }
 
 .MessageTop__username{
@@ -174,7 +172,7 @@ display: flex;
 }
 
 
-.form-image{
+.form__icon{
   position: absolute;
   height: 50px;
   right: 10px;
@@ -183,6 +181,7 @@ display: flex;
 .input-box__image{
   font-size: 25px;
   line-height: 50px;
+  margin-top: 15px;
 }
 
 .hidden{

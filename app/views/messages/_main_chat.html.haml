@@ -2,44 +2,30 @@
   .chat-main__group-info
     .main-left
       .left-group
-        test
+        = @group.name
+
       .left-menber
-        Menber : name
+        - @group.users.each do |user|
+          = user.name
+          
+
     .chat-member
     .main-right
-      = link_to '#' do
+      = link_to edit_group_path(@group) do
         Edit
         
   
 
   .chat-main__message-list
-    .Message
-      .MessageTop
-        .MessageTop__username
-          PON
-        .MessageTop__date
-          2020/12/09(水)18:00
-      .MessageMain
-        おはようさん
+    = render @messages
     
-  
-    .Message
-      .MessageTop
-        .MessageTop__username
-          PON
-        .MessageTop__date
-          2020/12/09(水)19:00
-      .MessageMain
-        こんにツア
 
 
   .Footer
-    .form
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .form-message
-        %input{type:"text", class:"form-text", placeholder:"type a message"}
-        .form-image
-          %label{class: "input-box__image"}
-            = icon('fas', 'image')
-            %input{type:"file", class:"hidden"}
-      
-      %input{type:"submit", class:"form-send", value:"Send"}
+        = f.text_field :content, class: 'form-text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon('far', 'image', class: 'form__icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form-send'
