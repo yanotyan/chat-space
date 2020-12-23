@@ -57,8 +57,10 @@ $(function(){
      })
      .done(function(data){
       let html = buildHTML(data);
-      $(".chat-main__message-list").append(html)
-      $('#message_content').val('')
+      $('.chat-main__message-list').append(html)
+      $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
+      $('.form')[0].reset()
+      // $('.form').prop("disabled", false);
       })
       .fail(function(){
           alert("エラ〜だよ")
