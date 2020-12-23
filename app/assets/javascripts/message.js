@@ -57,7 +57,11 @@ $(function(){
      })
      .done(function(data){
       let html = buildHTML(data);
-      console.log("data")
-     })
-  });
+      $(".chat-main__message-list").append(html)
+      $('#message_content').val('')
+      })
+      .fail(function(){
+          alert("エラ〜だよ")
+      })
+  })
 });
