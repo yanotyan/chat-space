@@ -63,6 +63,7 @@ $(function(){
     .fail(function() {
       alert('error');
     });
+    setInterval(reloadMessages, 7000);
   };
 
   $('.form').on('submit', function(e){
