@@ -1,10 +1,11 @@
 $(function(){
 
+  
   function buildHTML(message){
     // 「もしメッセージに画像が含まれていたら」という条件式
     if (message.image) {
       let html = 
-        `<div class="message">
+        `<div class="message" data-message-id=${message.id}>
           <div class="MessageTop">
             <div class="MessageTop__username">
               ${message.user_name}
@@ -23,7 +24,7 @@ $(function(){
       return html;
     } else {
       let html = 
-        `<div class="message">
+        `<div class="message" data-message-id=${message.id}>
            <div class="MessageTop">
              <div class="MessageTop__username">
               ${message.user_name}
@@ -41,6 +42,28 @@ $(function(){
       return html;
     };
   }
+
+  let reloadMessages = function() {
+    let last_message_id = $('.MessageBox:last').data("message-id") || 0;
+    $.ajax({
+      url: "api/messages",
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      if (messages.length !== 0) {
+        let insertHTML = '';
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        $('.MessageField').append(insertHTML);
+       }
+      })
+    .fail(function() {
+      alert('error');
+    });
+  };
 
   $('.form').on('submit', function(e){
     e.preventDefault();
