@@ -64,6 +64,7 @@ $(function(){
       })
       .fail(function(){
           alert("エラ〜だよ")
+          $('.form-send').prop("disabled", false);
       })
   })
 });
