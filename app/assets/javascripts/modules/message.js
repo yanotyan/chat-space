@@ -1,6 +1,4 @@
 $(function(){
-
-  
   function buildHTML(message){
     // 「もしメッセージに画像が含まれていたら」という条件式
     if (message.image) {
@@ -43,30 +41,6 @@ $(function(){
     };
   }
 
-  let reloadMessages = function() {
-    let last_message_id = $('.MessageBox:last').data("message-id") || 0;
-    $.ajax({
-      url: "api/messages",
-      type: 'get',
-      dataType: 'json',
-      data: {id: last_message_id}
-    })
-    .done(function(messages) {
-      if (messages.length !== 0) {
-        let insertHTML = '';
-        $.each(messages, function(i, message) {
-          insertHTML += buildHTML(message)
-        });
-        $('.MessageField').append(insertHTML);
-        $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
-       }
-      })
-    .fail(function() {
-      alert('error');
-    });
-    setInterval(reloadMessages, 7000);
-  };
-
   $('.form').on('submit', function(e){
     e.preventDefault();
     let formData = new FormData(this);
@@ -82,14 +56,14 @@ $(function(){
      })
      .done(function(data){
       let html = buildHTML(data);
-      $('.chat-main__message-list').append(html)
-      $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
-      $('.form')[0].reset()
-      $('.form-send').prop("disabled", false);
+        $('.chat-main__message-list').append(html)
+        $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
+        $('.form')[0].reset()
+        $('.form-send').prop("disabled", false);
       })
       .fail(function(){
-          alert("エラ〜だよ")
-          $('.form-send').prop("disabled", false);
-      })
-  })
-});
+        alert("エラ〜だよ")
+        $('.form-send').prop("disabled", false);
+      });
+    })
+  });
