@@ -1,10 +1,9 @@
 $(function(){
-
   function buildHTML(message){
     // 「もしメッセージに画像が含まれていたら」という条件式
     if (message.image) {
       let html = 
-        `<div class="message">
+        `<div class="message" data-message-id=${message.id}>
           <div class="MessageTop">
             <div class="MessageTop__username">
               ${message.user_name}
@@ -23,7 +22,7 @@ $(function(){
       return html;
     } else {
       let html = 
-        `<div class="message">
+        `<div class="message" data-message-id=${message.id}>
            <div class="MessageTop">
              <div class="MessageTop__username">
               ${message.user_name}
@@ -57,14 +56,14 @@ $(function(){
      })
      .done(function(data){
       let html = buildHTML(data);
-      $('.chat-main__message-list').append(html)
-      $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
-      $('.form')[0].reset()
-      $('.form-send').prop("disabled", false);
+        $('.chat-main__message-list').append(html)
+        $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
+        $('.form')[0].reset()
+        $('.form-send').prop("disabled", false);
       })
       .fail(function(){
-          alert("エラ〜だよ")
-          $('.form-send').prop("disabled", false);
-      })
-  })
-});
+        alert("エラ〜だよ")
+        $('.form-send').prop("disabled", false);
+      });
+    })
+  });
